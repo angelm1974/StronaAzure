@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StronaAzure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0168768493e37426a680a0673b65a23f5faa3a86")]
 [assembly: System.Reflection.AssemblyProductAttribute("StronaAzure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StronaAzure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

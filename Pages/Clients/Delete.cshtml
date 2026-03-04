@@ -1,0 +1,23 @@
+@page "{id:int}"
+@model StronaAzure.Pages.Clients.DeleteModel
+@{
+    ViewData["Title"] = "Usuń klienta";
+}
+
+<h1 class="mb-3 text-danger">Usuń klienta</h1>
+
+<div class="alert alert-warning">
+    <p>Czy na pewno chcesz usunąć tego klienta?</p>
+    <ul class="mb-0">
+        <li><strong>@Model.Client?.FirstName @Model.Client?.LastName</strong></li>
+        <li>Wiek: @Model.Client?.Age</li>
+    </ul>
+</div>
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.Client?.Id" />
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-danger">Usuń</button>
+        <a asp-page="Index" class="btn btn-secondary">Anuluj</a>
+    </div>
+</form>

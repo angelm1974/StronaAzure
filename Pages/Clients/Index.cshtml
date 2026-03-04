@@ -1,0 +1,42 @@
+@page
+@model StronaAzure.Pages.Clients.IndexModel
+@{
+    ViewData["Title"] = "Klienci";
+}
+
+<h1 class="mb-3">Klienci serwisu</h1>
+<p>
+    <a class="btn btn-primary" asp-page="Create">Dodaj klienta</a>
+</p>
+
+@if (Model.Clients.Count == 0)
+{
+    <div class="alert alert-info">Brak zapisanych klientów.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Wiek</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var client in Model.Clients)
+        {
+            <tr>
+                <td>@client.FirstName</td>
+                <td>@client.LastName</td>
+                <td>@client.Age</td>
+                <td class="text-end">
+                    <a class="btn btn-sm btn-outline-secondary me-1" asp-page="Edit" asp-route-id="@client.Id">Edytuj</a>
+                    <a class="btn btn-sm btn-outline-danger" asp-page="Delete" asp-route-id="@client.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
